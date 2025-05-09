@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --primary-color: #13062c;
+    --secondary-color: #b257fc;
+    --border-color: #2f1066;
+}
+body {
+    background-color: #0b021d;
+    position: relative;
+}
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    margin: 1rem;
+    padding: 1.5rem;
+    border: solid 2px var(--border-color);
+    border-radius: 8px;
+}
+.header-title {
+    background-color: var(--primary-color);
+    font-size: 34px;
+}
+.button-menu {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.4rem 0.6rem;
+    border-radius: 8px;
+}
+.navegacao {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    height: 20rem;
+    width: 205px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: solid 2px var(--border-color);
+    border-radius: 8px;
+}
+.navegacao.ativo {
+    display: block;
+}
+.item-menu {
+    padding: 0.5rem;
+    list-style: none;
+    border-bottom: solid 2px var(--border-color);
+    text-align: center;
+}
+.status {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: solid 2px var(--border-color);
+    border-radius: 8px;
+    margin: 1rem;
+    padding: 1.5rem;
+}
+.status-id {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+}
+.avatar {
+    height: 6rem;
+    width: 6rem;
+    background-color: var(--secondary-color);
+    border-radius: 100%;
+    border: solid 2px var(--border-color);
+}
+.status-level {
+    background-color: var(--primary-color);
+    font-size: 21px;
+}
+.status-values {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+}
+.status-rank {
+    font-size: 21px;
+}
+.progress-bar {
+    height: 1rem;
+    width: 12rem;
+    border: solid 2px var(--secondary-color);
+    border-radius: 9999px;
+    margin: 0.5rem 0;
+}
+.progress {
+    height: 100%;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 9999px;
+    transition: all 1s linear;
+}
+.xp {
+    font-size: 21px;
+    margin: 0.5rem 0;
+}

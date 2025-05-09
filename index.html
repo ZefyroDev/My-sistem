@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="index.css" />
+        <script src="index.js" defer></script>
+        <title>Meu sistema</title>
+    </head>
+    <body>
+        <nav class="navegacao">
+            <ul>
+                <li class="item-menu">Pagina inicial</li>
+                <li class="item-menu">Missões</li>
+            </ul>
+        </nav>
+        <header class="header">
+            <h1 class="header-title">Meu sistema</h1>
+            <button class="button-menu">Menu</button>
+        </header>
+        <main>
+            <section class="status">
+                <article class="status-id">
+                    <div class="avatar"></div>
+                </article>
+                <article class="status-values">
+                    <p class="status-rank">Caçador rank E</p>
+                    <div class="progress-bar">
+                        <div id="progress" class="progress"></div>
+                    </div>
+                    <p id="xp" class="xp">0 / 1000</p>
+                    <p id="status-level" class="status-level">Level 1</p>
+                </article>
+            </section>
+            <button id="medir-xp" class="button-menu">Aumentar</button>
+        </main>
+    </body>
+</html>
