@@ -43,9 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let progress = document.getElementById("progress");
     let level = document.getElementById("status-level");
     let xp = document.getElementById("xp");
-
     let personagem = JSON.parse(localStorage.getItem("personagem"));
-
+    console.log({ personagem });
     if (personagem) {
         xpAtual = personagem.xpAtual;
         progress.style.width = personagem.tamanhoBarra + "%";
@@ -55,3 +54,24 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Nada");
     }
 });
+let salvarMd = document
+    .getElementById("salvar-md")
+    .addEventListener("click", () => {
+        personagem = JSON.parse(localStorage.getItem("personagem"));
+
+        const textoMd = `
+# Meu Personagem
+
+- **Level:** ${personagem.lv}
+- **XP Atual:** ${personagem.xpAtual}
+- **XP Mínimo:** ${personagem.xpMin}
+- **XP Máximo:** ${personagem.xpMax}
+- **Barra de Progresso:** ${personagem.tamanhoBarra}%
+`.trim();
+
+        const blob = new Blob([textoMd], { type: "text/markdown" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "personagem.md";
+        link.click();
+    });
